@@ -26,7 +26,7 @@
     <div class="px-2 d-flex justify-content-between">
       <span>Total: {{ cartTotalPrice }}</span>
       <a href="#" @click.prevent="clearCartItems()" :class="disabledClass(cart)"
-        >Clear Cart {{ cart.length }}</a
+        >Clear Cart</a
       >
     </div>
   </div>

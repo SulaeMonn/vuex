@@ -1,6 +1,6 @@
 <template>
   <div class="col-3 mt-3">
-    <div class="card h-100 text-left">
+    <div class="card h-100 text-left" style="padding: 10px">
       <img :src="product.image" alt="" class="w-100" style="height: 300px" />
       <div class="card-body">
         <h4 class="card-title">

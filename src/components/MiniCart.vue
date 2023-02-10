@@ -25,7 +25,9 @@
     </div>
     <div class="px-2 d-flex justify-content-between">
       <span>Total: {{ cartTotalPrice }}</span>
-      <a href="#" @click.prevent="clearCartItems()">Clear Cart</a>
+      <a href="#" @click.prevent="clearCartItems()" :class="disabledClass(cart)"
+        >Clear Cart {{ cart.length }}</a
+      >
     </div>
   </div>
 </template>
@@ -46,8 +48,16 @@ export default {
       "clearCartItems",
       "getCartItems",
     ]),
+    disabledClass: (cart) => {
+      return cart.length === 0 ? "disabled" : "";
+    },
   },
 };
 </script>
 
-<style></style>
+<style>
+.disabled {
+  color: gray;
+  pointer-events: none;
+}
+</style>
